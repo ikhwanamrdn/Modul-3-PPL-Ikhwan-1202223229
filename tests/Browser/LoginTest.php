@@ -15,11 +15,11 @@ class LoginTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
-                    ->assertSee('Enterprise')
+                    ->assertSee('Enterprise Application Development')
                     ->clickLink('Log in')
                     ->assertPathIs('/login')
-                    ->type('Email', 'testweb@gmail.com')
-                    ->type('Password', 'tes')
+                    ->type('email', 'tesweb@gmail.com')
+                    ->type('password', 'tes')
                     ->press('LOG IN')
                     ->assertPathIs('/dashboard');
         });
